@@ -3,6 +3,7 @@ on: push
 env:
   docker_username: ${{ github.actor }}
   docker-password: ${{ secrets.GITHUB_TOKEN }}
+  GIT_COMMIT: ${{ github.sha }}
 jobs:
   Docker-image:
       runs-on: ubuntu-latest
